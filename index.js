@@ -11,16 +11,11 @@ const mongoose = require('mongoose');
 const app = express();
 const cors = require('cors');
 
-// const routers1 = require('vfbvFB');
-// const routers2 = require('vfbvFB');
-
 app.use(express.urlencoded());
 app.use(cookieParser());
 app.use(cors());
 
-app.use('/', (req, res) => {
-  res.send({ message: 'Hello' });
-});
+app.use('/', require('./routes'));
 
 app.use(bodyParser.json());
 
