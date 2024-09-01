@@ -11,7 +11,8 @@ const mongoose = require('mongoose');
 const app = express();
 const cors = require('cors');
 
-app.use(express.urlencoded());
+// app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 app.use(cookieParser());
 app.use(cors());
 
